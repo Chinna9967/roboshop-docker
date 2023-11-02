@@ -3,12 +3,12 @@ networks:
     driver: bridge
 services:
   mongodb:
-    image: m1:v1
+    image: mongodb:v1
     container_name: mongodb
     networks:
     - roboshop
   catalogue:
-    image: c1:v1
+    image: catalogue:v1
     container_name: catalogue
     networks:
     - roboshop
@@ -20,7 +20,7 @@ services:
     networks:
       - roboshop
   user:
-    image: u1:v1
+    image: user:v1
     container_name: user
     networks:
       - roboshop
@@ -67,7 +67,7 @@ services:
       - user
       - rabbitmq
   web:
-    image: w1:v1
+    image: web:v1
     container_name: web
     networks:
       - roboshop
